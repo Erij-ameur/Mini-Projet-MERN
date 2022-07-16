@@ -1,13 +1,19 @@
-const express = require ("express")
+
+const express = require("express")
+const ArtWorkRouter= require("./routers/ArtWork")
+const UserRouter=require("./routers/user")
+const CategoryRouter=require("./routers/category")
 require("./db/connexion")
-const auth = require ("./routers/auth") 
 var server = express()
-var port = 5007
+var port=5007
+
 
 server.use(express.json())
-server.use(auth)
+server.use(ArtWorkRouter)
+server.use(UserRouter)
+server.use(CategoryRouter)
 
 
-server.listen(port, ()=>{
-    console.log(`server is running on ${port}`)
+server.listen(port,()=>{
+console.log(`serverk yemchi port: ${port}`)
 })

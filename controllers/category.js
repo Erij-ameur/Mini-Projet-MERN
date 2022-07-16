@@ -1,8 +1,3 @@
-const object ={
-    id:1,
-    username:"raed",
-    email:"raed@gmail.com",
-}
 
 const category = require("../models/category")
 

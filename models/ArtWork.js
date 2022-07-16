@@ -1,7 +1,7 @@
-const mongoose = require ("mongoose")
+const mongoose=require("mongoose")
 
-const artwork=new mongoose.Schema(
-    {   
+const ArtWork=new mongoose.Schema(
+    {  
         Title:{type:String},
         category:{type:String},
         description:{type:String},
@@ -11,6 +11,6 @@ const artwork=new mongoose.Schema(
     {timestamps:true}
 );
 
-const artworkmodel =  mongoose.model("artwork",artwork)
+const ArtWorkModel= mongoose.model("ArtWork",ArtWork)
 
-module.exports = artworkmodel ;
+module.exports= ArtWorkModel
