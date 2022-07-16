@@ -4,22 +4,22 @@ const userController = require("./../controllers/user")
 var middleware = require("./../middlewares/datacheck")
 var MiddlewareAuth =require("./../middlewares/auth")
 
-route.post("/register", userController.register) 
+route.post("/user/api/register", userController.register) 
 
-route.post("/login",middleware, userController.login)
+route.post("/user/api/login",middleware, userController.login)
 
-route.post("/me",MiddlewareAuth,userController.me)
+route.post("/user/api/me",MiddlewareAuth,userController.me)
 
-route.get("/inscription", userController.getInscription) 
+route.get("/user/api/get", userController.getInscription) 
 
-route.get("/inscription/:id", userController.getByIdInscription)
+route.get("/user/api/get/:id", userController.getByIdInscription)
 
-route.put("/inscription",userController.putManyInscription)
+route.put("/user/api/put",userController.putManyInscription)
 
-route.put("/inscription/update/:id", userController.putByIdInscription) 
+route.put("/user/api/put/:id", userController.putByIdInscription) 
 
-route.delete("/inscription/delete/:id", userController.deleteByIdInscription) 
+route.delete("/user/api/delete/:id", userController.deleteByIdInscription) 
 
-route.delete("/inscription",userController.deleteManyInscription)
+route.delete("/user/api/delete",userController.deleteManyInscription)
 
 module.exports = route
